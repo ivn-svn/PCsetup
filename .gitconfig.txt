@@ -1,0 +1,36 @@
+[pull]
+        rebase = false
+[fetch]
+        prune = false
+[rebase]
+        autoStash = false
+[diff]
+        guitool = winmerge
+[difftool "kdiff3"]
+        cmd = \"\" \"$LOCAL\" \"$REMOTE\"
+        path = C:/Program Files/KDiff3/kdiff3.exe
+[filter "lfs"]
+        clean = git-lfs clean -- %f
+        smudge = git-lfs smudge -- %f
+        process = git-lfs filter-process
+        required = true
+[user]
+        name = Svn
+        email = example@mail.com
+[difftool "vscode"]
+        path = C:/Program Files/Microsoft VS Code/code.exe
+        cmd = \"C:/Program Files/Microsoft VS Code/code.exe\" --wait --diff \"$LOCAL\" \"$REMOTE\"
+[difftool "winmerge"]
+        path = C:/Program Files/WinMerge/WinMergeU.exe
+        cmd = \"C:/Program Files/WinMerge/WinMergeU.exe\" -e -u \"$LOCAL\" \"$REMOTE\"
+[merge]
+        guitool = winmerge
+[mergetool "winmerge"]
+        path = C:/Program Files/WinMerge/winmergeu.exe
+        cmd = \"C:/Program Files/WinMerge/winmergeu.exe\" -e -u  -wl -wr -fm -dl \"Mine: $LOCAL\" -dm \"Merged: $BASE\" -dr \"Theirs: $REMOTE\" \"$LOCAL\" \"$BASE\" \"$REMOTE\" -o \"$MERGED\"
+[init]
+        defaultBranch = master
+[credential "https://www.github.com"]
+        username = username
+        provider = generic
+
