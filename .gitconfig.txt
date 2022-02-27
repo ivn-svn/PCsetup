@@ -16,7 +16,7 @@
         required = true
 [user]
         name = Svn
-        email = example@mail.com
+        email = example-..@..mail.com
 [difftool "vscode"]
         path = C:/Program Files/Microsoft VS Code/code.exe
         cmd = \"C:/Program Files/Microsoft VS Code/code.exe\" --wait --diff \"$LOCAL\" \"$REMOTE\"
