@@ -1,0 +1,2 @@
+brew install ffmpeg && /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)" && brew cask install android-platform-tools
+&& brew install scrcpy
